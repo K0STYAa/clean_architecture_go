@@ -35,29 +35,30 @@ func init() {
 // 	"PGTARGETSESSIONATTRS": "target_session_attrs",
 // 	"PGSERVICE":            "service",
 // 	"PGSERVICEFILE":        "servicefile",
+
 func initDefaultEnv() error {
 	if len(os.Getenv("PGHOST")) == 0 {
-		if err := os.Setenv("PGHOST", "postgres"); err != nil {
+		if err := os.Setenv("PGHOST", "188.246.229.3"); err != nil {
 			return errors.WithStack(err)
 		}
 	}
 	if len(os.Getenv("PGPORT")) == 0 {
-		if err := os.Setenv("PGPORT", "5838"); err != nil {
+		if err := os.Setenv("PGPORT", "5432"); err != nil {
 			return errors.WithStack(err)
 		}
 	}
 	if len(os.Getenv("PGDATABASE")) == 0 {
-		if err := os.Setenv("PGDATABASE", "postgres"); err != nil {
+		if err := os.Setenv("PGDATABASE", "s028764"); err != nil {
 			return errors.WithStack(err)
 		}
 	}
 	if len(os.Getenv("PGUSER")) == 0 {
-		if err := os.Setenv("PGUSER", "postgres"); err != nil {
+		if err := os.Setenv("PGUSER", "s028764"); err != nil {
 			return errors.WithStack(err)
 		}
 	}
 	if len(os.Getenv("PGPASSWORD")) == 0 {
-		if err := os.Setenv("PGPASSWORD", "password"); err != nil {
+		if err := os.Setenv("PGPASSWORD", "hide"); err != nil {
 			return errors.WithStack(err)
 		}
 	}
